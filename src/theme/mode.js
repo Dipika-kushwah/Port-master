@@ -1,5 +1,5 @@
 import "./mode.css";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useDispatch } from "react-redux";
 import { themeActions } from "../store/theme";
 
@@ -21,41 +21,38 @@ const Mode=()=>{
     const dispatch=useDispatch();
     const [isVisible, setIsVisible] = useState(false);
     const [iconIndex,setIcon]=useState(0);
+    const [, setMode] = useState('light');
 
-    let mode='light';
-    function fetchSystemMode() {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            mode='dark';
-        }else{
-            mode='light';
+    const handleModeChange = useCallback((index) => {
+        let newMode;
+        if (index === 0) {
+            newMode = 'light';
+        } else if (index === 1) {
+            newMode = 'dark';
+        } else {
+            newMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
         }
-    }
 
-    useEffect(() => {
-        fetchSystemMode();
-        if (mode==='dark') {
-            handleModeChange(1);
-        }
-    }, [mode]);
-
-    function handleModeChange(index) {
-        if(index===0){
-            mode="light";
-        }else if(index===1){
-            mode="dark";
-        }else{
-            fetchSystemMode();
-        }
+        setMode(newMode);
         setIcon(index);
-        const listItems=document.getElementsByClassName("modeItem");
-        for(let i=0;i<3;i++){
+        const listItems = document.getElementsByClassName("modeItem");
+        for (let i = 0; i < 3; i++) {
             listItems[i].classList.remove("activeMode");
         }
         listItems[index].classList.add("activeMode");
 
-        dispatch(themeActions.setMode(mode));
+        dispatch(themeActions.setMode(newMode));
         setIsVisible(false);
-    }
+    }, [dispatch]);
+
+    useEffect(() => {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) {
+            handleModeChange(1);
+        } else {
+            handleModeChange(0);
+        }
+    }, [handleModeChange]);
     function handleDropdown() {
         setIsVisible(!isVisible);
     }
