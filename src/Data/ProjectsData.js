@@ -1,39 +1,40 @@
 const DUMMY_PROJECTS=[
+
     {
-        projectTitle:'PortFolio Template',
-        description: 'This project is a React app to generate a creative professional website based on Data provided. The website uses no backend and is free to fork and use.',
-        sourceLink:'https://github.com/Dipika-kushwah',
+        projectTitle:'B2B Application',
+        description: 'Worked on a B2B web application focused on managing business data, users, and workflows. Implemented scalable frontend features using React.js, integrated APIs, and ensured responsive, user-friendly interfaces for business users. ',
+        sourceLink:'https://github.com/Dipika-kushwah/B2B',
+        lastUpdated:'Sep 24 2024'
+    },
+    {
+        projectTitle:'Library Management System',
+        description: 'Developed a Library Management System using React.js to manage books, users, and issue/return records. Implemented CRUD operations, search and filter functionality, and a clean responsive UI to simplify library operations and improve data management efficiency.',
+        sourceLink:'https://github.com/Dipika-kushwah/Library-Management',
         lastUpdated:'Jan 20 2023'
     },
     {
-        projectTitle:'Expense Tracker',
-        description: 'A React project to get a track of weekly expenses. It also creates a graphical data to help monitor the expenses on daily basis',
-        sourceLink:'https://github.com/Dipika-kushwah',
+        projectTitle:'React Redux CRUD',
+        description: 'Built a CRUD application using React.js and Redux to manage application state efficiently. Implemented create, read, update, and delete operations with centralized state management, ensuring predictable data flow and improved scalability.',
+        sourceLink:'https://github.com/Dipika-kushwah/react_redux_crud',
         lastUpdated:'Dec 30 2022'
     },
     {
-        projectTitle:'Realtime Chat Site',
-        description: 'It is a Realtime Chat Website built using Socket.io and Express with NodeJs as a backend and MongoDB as a database. It updates the chat messages in realtime with Typing notification of other users',
-        sourceLink:'https://github.com/Dipika-kushwah',
+        projectTitle:'Redux Navigation React',
+        description: 'Implemented navigation handling using React Router and Redux, enabling seamless state-aware routing across the application. Improved user experience by maintaining navigation state and handling protected routes efficiently.',
+        sourceLink:'https://github.com/Dipika-kushwah/redux-navigation-react',
         lastUpdated:'Dec 10 2022'
     },
     {
-        projectTitle:'Food Order Website',
-        description: 'It is a React based website demonstrating how food order works with Cart updates and storing it in Firebase Database.',
-        sourceLink:'https://github.com/Dipika-kushwah',
+        projectTitle:'React Dashboard',
+        description: 'Designed and developed a responsive React Dashboard featuring data tables, charts, filters, and analytics views. Focused on reusable components, clean UI design, and data visualization to present insights effectively.',
+        sourceLink:'https://github.com/Dipika-kushwah/react-dashboard',
         lastUpdated:'Jan 25 2023'
     },
     {
-        projectTitle:'Space Tourism Website',
-        description: 'It is a solution to challenge of FrontEnd Mentors. It is a React website to depict facts about our Solar System. ',
-        sourceLink:'https://github.com/Dipika-kushwah',
+        projectTitle:'Bookstore Backend',
+        description: 'Developed a backend for a Bookstore application using Node.js, Express.js, and MongoDB. Implemented REST APIs, JWT-based authentication, role-based access control (admin/user), and secure data handling for books, users, and orders. ',
+        sourceLink:'https://github.com/Dipika-kushwah/bookstore-backend',
         lastUpdated:'Oct 16 2023'
-    },
-    {
-        projectTitle:'Password Generator',
-        description: 'A website where you can generate strong Passwords to use as Authentication in different websites and apps based on the difficulty level set by you. ',
-        sourceLink:'https://github.com/Dipika-kushwah',
-        lastUpdated:'Sep 24 2024'
     },
     {
         projectTitle:'QR Code Generator',
