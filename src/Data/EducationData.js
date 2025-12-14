@@ -18,10 +18,10 @@ const languagesDone = [
     }
 ]
 const EducationData={
-    collegeName:"BM College of Technology, Indore (M.P.)",
-    courseName:"B.Tech in Computer Science",
+    collegeName:"RGPV University, Bhopal (Affiliated to BM College of Technology)",
+    courseName:"B.Tech in Computer Science and Engineering",
     couseStartYear:"2018",
-    courseEndYear:"2021",
+    courseEndYear:"2022",
     details:[
         'I joined my college in 2018. Cleared First and Second Year with a good academic performance.',
         'I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, COA, AI etc.',
